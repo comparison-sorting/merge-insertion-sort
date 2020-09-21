@@ -1,10 +1,8 @@
-import fordjohnson from './fordjohnson' ;
+import fordjohnson from './fordjohnson';
 
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
-	fordjohnson ,
-} ;
+	fordjohnson
+};
 
-export {
-	fordjohnson ,
-} ;
+export {fordjohnson};
