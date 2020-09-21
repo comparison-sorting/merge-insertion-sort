@@ -3,16 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl">
-  <title data-ice="title">aureooms/js-sort API Document</title>
+  <title data-ice="title">Home | @aureooms/js-merge-insertion-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
-  
-  
   <script src="script/manual.js"></script>
-<script data-ice="userScript" src="user/script/0-header.js"></script>
-<link data-ice="userStyle" rel="stylesheet" href="user/css/0-style.css">
-</head>
+<script src="./inject/script/0-header.js"></script><link rel="stylesheet" href="./inject/css/0-style.css"><meta name="description" content="sorting code bricks for JavaScript"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="@aureooms/js-merge-insertion-sort"><meta property="twitter:description" content="sorting code bricks for JavaScript"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -21,7 +17,6 @@
   <a href="identifiers.html">Reference</a>
   <a href="source.html">Source</a>
   <a href="test.html" data-ice="testLink">Test</a>
-  <a data-ice="repoURL" href="https://github.com/aureooms/js-sort.git" class="repo-url-github">Repository</a>
   <div class="search-box">
   <span>
     <img src="./image/search.png">
@@ -29,62 +24,43 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-</header>
+<a style="position:relative; top:3px;" href="https://github.com/aureooms/js-merge-insertion-sort.git"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">sort</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-bubblesort">bubblesort</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-_fordjohnson">_fordjohnson</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-insertionsort">insertionsort</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-selectionsort">selectionsort</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">utils</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-issorted">issorted</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-whole">whole</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-fordjohnson">fordjohnson</a></span></span></li>
 </ul>
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-js-sort-http-aureooms-github-io-js-sort-"><a href="http://aureooms.github.io/js-sort">js-sort</a></h1>
-<p>Sorting algorithms for JavaScript. Parent is
-<a href="https://github.com/aureooms/js-algo">aureooms/js-algo</a>.</p>
-<pre><code class="lang-js"><code class="source-code prettyprint">let fordjohnson = sort._fordjohnson( search.binarysearch ) ;</code>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="-person-fencing---a-href--https---aureooms-github-io-js-merge-insertion-sort---aureooms-js-merge-insertion-sort--a-">:person_fencing: <a href="https://aureooms.github.io/js-merge-insertion-sort">@aureooms/js-merge-insertion-sort</a></h1><p><a href="https://en.wikipedia.org/wiki/Merge-insertion_sort">Ford-Johnson algorithm</a> for JavaScript.
+See <a href="https://aureooms.github.io/js-merge-insertion-sort">docs</a>.
+Parent is <a href="https://github.com/aureooms/js-sort">@aureooms/js-sort</a>.</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">import { fordjohnson } from &quot;@aureooms/js-merge-insertion-sort&quot; ;
+import { binarysearch } from &quot;@aureooms/js-search&quot; ;
+import { swap } from &quot;@aureooms/js-array&quot; ;
+const fj = fordjohnson( binarysearch ) ;
+const sort = (compare, a, i, j) =&gt; fj(compare, swap, a, i, j) ;</code>
 </code></pre>
-<p><a href="https://raw.githubusercontent.com/aureooms/js-sort/master/LICENSE"><img src="http://img.shields.io/npm/l/aureooms-js-sort.svg?style=flat" alt="NPM license"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-sort"><img src="http://img.shields.io/npm/v/aureooms-js-sort.svg?style=flat" alt="NPM version"></a>
-<a href="https://travis-ci.org/aureooms/js-sort"><img src="http://img.shields.io/travis/aureooms/js-sort.svg?style=flat" alt="Build Status"></a>
-<a href="https://coveralls.io/r/aureooms/js-sort"><img src="http://img.shields.io/coveralls/aureooms/js-sort.svg?style=flat" alt="Coverage Status"></a>
-<a href="https://david-dm.org/aureooms/js-sort#info=dependencies"><img src="http://img.shields.io/david/aureooms/js-sort.svg?style=flat" alt="Dependencies Status"></a>
-<a href="https://david-dm.org/aureooms/js-sort#info=devDependencies"><img src="http://img.shields.io/david/dev/aureooms/js-sort.svg?style=flat" alt="devDependencies Status"></a>
-<a href="https://codeclimate.com/github/aureooms/js-sort"><img src="http://img.shields.io/codeclimate/github/aureooms/js-sort.svg?style=flat" alt="Code Climate"></a>
-<a href="https://www.npmjs.org/package/aureooms-js-sort"><img src="http://img.shields.io/npm/dm/aureooms-js-sort.svg?style=flat" alt="NPM downloads per month"></a>
-<a href="https://github.com/aureooms/js-sort/issues"><img src="http://img.shields.io/github/issues/aureooms/js-sort.svg?style=flat" alt="GitHub issues"></a>
-<a href="https://aureooms.github.io/js-sort/source.html"><img src="https://aureooms.github.io/js-sort/badge.svg" alt="Documentation"></a></p>
-<h2 id="children">Children</h2>
-<p>This package has several children:</p>
-<ul>
-<li><a href="https://github.com/aureooms/js-bucketsort">aureooms/js-bucketsort</a>: bucketsort for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-countingsort">aureooms/js-countingsort</a>: countingsort for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-in-situ-sort-spec">aureooms/js-in-situ-sort-spec</a>: in place sorting for JavaScript<ul>
-<li><a href="https://github.com/aureooms/js-heapsort">aureooms/js-heapsort</a>: heapsort for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-quicksort">aureooms/js-quicksort</a>: quicksort for JavaScript</li>
-</ul>
-</li>
-<li><a href="https://github.com/aureooms/js-mergesort">aureooms/js-mergesort</a>: mergesort for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-merging">aureooms/js-merging</a>: merging for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-partition">aureooms/js-partition</a>: partition for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-radixsort">aureooms/js-radixsort</a>: radixsort for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-selection">aureooms/js-selection</a>: selection for JavaScript</li>
-<li><a href="https://github.com/aureooms/js-odd-even-mergesort">aureooms/js-odd-even-mergesort</a>: Batcher&apos;s odd-even mergesort for JavaScript</li>
-</ul>
-<h2 id="reference">Reference</h2>
-<ul>
-<li><a href="http://sorting.at">http://sorting.at</a></li>
-</ul>
+<p><a href="https://raw.githubusercontent.com/aureooms/js-merge-insertion-sort/master/LICENSE"><img src="https://img.shields.io/github/license/aureooms/js-merge-insertion-sort.svg" alt="License"></a>
+<a href="https://www.npmjs.org/package/@aureooms/js-merge-insertion-sort"><img src="https://img.shields.io/npm/v/@aureooms/js-merge-insertion-sort.svg" alt="Version"></a>
+<a href="https://travis-ci.org/aureooms/js-merge-insertion-sort/branches"><img src="https://img.shields.io/travis/aureooms/js-merge-insertion-sort/master.svg" alt="Build"></a>
+<a href="https://david-dm.org/aureooms/js-merge-insertion-sort"><img src="https://img.shields.io/david/aureooms/js-merge-insertion-sort.svg" alt="Dependencies"></a>
+<a href="https://david-dm.org/aureooms/js-merge-insertion-sort?type=dev"><img src="https://img.shields.io/david/dev/aureooms/js-merge-insertion-sort.svg" alt="Dev dependencies"></a>
+<a href="https://github.com/aureooms/js-merge-insertion-sort/issues"><img src="https://img.shields.io/github/issues/aureooms/js-merge-insertion-sort.svg" alt="GitHub issues"></a>
+<a href="https://www.npmjs.org/package/@aureooms/js-merge-insertion-sort"><img src="https://img.shields.io/npm/dm/@aureooms/js-merge-insertion-sort.svg" alt="Downloads"></a></p>
+<p><a href="https://codeclimate.com/github/aureooms/js-merge-insertion-sort/issues"><img src="https://img.shields.io/codeclimate/issues/aureooms/js-merge-insertion-sort.svg" alt="Code issues"></a>
+<a href="https://codeclimate.com/github/aureooms/js-merge-insertion-sort/trends/churn"><img src="https://img.shields.io/codeclimate/maintainability/aureooms/js-merge-insertion-sort.svg" alt="Code maintainability"></a>
+<a href="https://codecov.io/gh/aureooms/js-merge-insertion-sort"><img src="https://img.shields.io/codecov/c/gh/aureooms/js-merge-insertion-sort/master.svg" alt="Code coverage (cov)"></a>
+<a href="https://codeclimate.com/github/aureooms/js-merge-insertion-sort/trends/technical_debt"><img src="https://img.shields.io/codeclimate/tech-debt/aureooms/js-merge-insertion-sort.svg" alt="Code technical debt"></a>
+<a href="https://aureooms.github.io/js-merge-insertion-sort//source.html"><img src="https://aureooms.github.io/js-merge-insertion-sort//badge.svg" alt="Documentation"></a>
+<a href="https://bundlephobia.com/result?p=@aureooms/js-merge-insertion-sort"><img src="https://img.shields.io/bundlephobia/minzip/@aureooms/js-merge-insertion-sort" alt="Package size"></a></p>
 </div>
 </div>
 
 <footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.4.8)</span></a>
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
 </footer>
 
 <script src="script/search_index.js"></script>

@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href>
-  <title data-ice="title">Source | @aureooms/js-merge-insertion-sort</title>
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/fordjohnson.js | @aureooms/js-merge-insertion-sort</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -34,39 +34,83 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">0/1</span></h1>
+<div class="content" data-ice="content"><h1 data-ice="title">src/fordjohnson.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">export default function fordjohnson(binarysearch) {
+	const sort = function (compare, swap, a, i, j) {
+		if (j - i &lt; 2) return;
 
-<table class="files-summary" data-ice="files" data-use-coverage="true">
-  <thead>
-    <tr>
-      <td>File</td>
-      <td>Identifier</td>
-      <td class="coverage">Document</td>
-      <td style="display: none;">Size</td>
-      <td style="display: none;">Lines</td>
-      <td style="display: none;">Updated</td>
-    </tr>
-  </thead>
-  <tbody>
-    
-  <tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/src/fordjohnson.js.html#errorLines=1">src/fordjohnson.js</a></span></td>
-      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-fordjohnson">fordjohnson</a></span></td>
-      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/1</span></td>
-      <td style="display: none;" data-ice="size">1232 byte</td>
-      <td style="display: none;" data-ice="lines">74</td>
-      <td style="display: none;" data-ice="updated">2020-09-02 08:13:35 (UTC)</td>
-    </tr>
-<tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/src/index.js.html">src/index.js</a></span></td>
-      <td data-ice="identifier" class="identifiers">-</td>
-      <td class="coverage"><span data-ice="coverage">-</span></td>
-      <td style="display: none;" data-ice="size">174 byte</td>
-      <td style="display: none;" data-ice="lines">8</td>
-      <td style="display: none;" data-ice="updated">2020-09-02 08:07:50 (UTC)</td>
-    </tr>
-</tbody>
-</table>
+		const m = ((j - i) / 2) | 0;
+		let k = m;
+
+		// Compare pairs of elements and put largest elements at the front of the
+		// array
+
+		while (k--) {
+			if (compare(a[i + k], a[i + m + k]) &lt; 0) {
+				swap(a, i + k, i + m + k);
+			}
+		}
+
+		// Sort the largest elements at the front recursively
+
+		const pairswap = function (a, i, j) {
+			swap(a, i, j);
+			swap(a, i + m, j + m);
+		};
+
+		sort(compare, pairswap, a, i, i + m);
+
+		// Merge the rest of the array into the front, one item at a time
+
+		let p = 1;
+		let y = 1;
+		let t = 1;
+
+		let q = 0;
+
+		while (i + m + t &lt;= j) {
+			let r = t;
+
+			while (r-- &gt; q) {
+				const w = a[i + m + t - 1];
+
+				const x = binarysearch(compare, a, i, i + m + q, w);
+				const l = x[0] + x[1];
+
+				let s = i + m + t;
+
+				while (--s &gt; l) {
+					swap(a, s, s - 1);
+				}
+			}
+
+			q = t;
+
+			p *= 2;
+			y = p - 2 * t;
+			t += y;
+		}
+
+		let r = j - i - m;
+
+		while (r-- &gt; q) {
+			const w = a[j - 1];
+
+			const x = binarysearch(compare, a, i, i + m + q, w);
+			const l = x[0] + x[1];
+
+			let s = j;
+
+			while (--s &gt; l) {
+				swap(a, s, s - 1);
+			}
+		}
+	};
+
+	return sort;
+}
+</code></pre>
+
 </div>
 
 <footer class="footer">
