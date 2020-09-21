@@ -1,8 +1,6 @@
 :person_fencing: [@aureooms/js-merge-insertion-sort](https://aureooms.github.io/js-merge-insertion-sort)
 ==
 
-<img src="http://www.explainxkcd.com//wiki/images/b/bc/ineffective_sorts.png" width="864">
-
 [Ford-Johnson algorithm](https://en.wikipedia.org/wiki/Merge-insertion_sort) for JavaScript.
 See [docs](https://aureooms.github.io/js-merge-insertion-sort).
 Parent is [@aureooms/js-sort](https://github.com/aureooms/js-sort).
