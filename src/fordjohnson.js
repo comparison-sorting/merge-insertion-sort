@@ -1,7 +1,7 @@
 
-export function _fordjohnson ( binarysearch ) {
+export default function fordjohnson ( binarysearch ) {
 
-	const fordjohnson = function ( compare , swap , a , i , j ) {
+	const sort = function ( compare , swap , a , i , j ) {
 
 		var m , k , t , y , p , q , r , x , l , w , s , pairswap ;
 
@@ -29,7 +29,7 @@ export function _fordjohnson ( binarysearch ) {
 			swap( a , i + m , j + m ) ;
 		} ;
 
-		fordjohnson( compare , pairswap , a , i , i + m ) ;
+		sort( compare , pairswap , a , i , i + m ) ;
 
 		// merge the rest of the array into the front, one item at a time
 
@@ -88,6 +88,6 @@ export function _fordjohnson ( binarysearch ) {
 
 	} ;
 
-	return fordjohnson ;
+	return sort ;
 
 }

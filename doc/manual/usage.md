@@ -9,7 +9,7 @@ import 'regenerator-runtime/runtime' ;
 
 Then
 ```js
-const measure = require( '@aureooms/js-sort' ) ;
+const measure = require( '@aureooms/js-merge-insertion-sort' ) ;
 // or
-import measure from '@aureooms/js-sort' ;
+import measure from '@aureooms/js-merge-insertion-sort' ;
 ```

@@ -1,2 +1,10 @@
-export * from './sort' ;
-export * from './utils' ;
+import fordjohnson from './fordjohnson' ;
+
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
+export default {
+	fordjohnson ,
+} ;
+
+export {
+	fordjohnson ,
+} ;

@@ -1,5 +1,5 @@
 {
-  "name": "@aureooms/js-sort",
+  "name": "@aureooms/js-merge-insertion-sort",
   "description": "sorting code bricks for JavaScript",
   "version": "7.0.0",
   "author": "Aurélien Ooms <aurelien.ooms@gmail.com>",
@@ -73,7 +73,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/aureooms/js-sort/issues"
+    "url": "https://github.com/aureooms/js-merge-insertion-sort/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -105,7 +105,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "http://aureooms.github.io/js-sort/",
+  "homepage": "http://aureooms.github.io/js-merge-insertion-sort/",
   "keywords": [
     "bricks",
     "javascript",
@@ -117,7 +117,7 @@
   "license": "AGPL-3.0",
   "main": "lib/index.js",
   "repository": {
-    "url": "https://github.com/aureooms/js-sort.git",
+    "url": "https://github.com/aureooms/js-merge-insertion-sort.git",
     "type": "git"
   },
   "scripts": {
